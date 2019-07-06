@@ -1,153 +1,168 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "ridiculous riddles",
-      "intents": [{
-          "name": "AMAZON.CancelIntent",
-          "samples": []
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "ridiculous riddles",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "quit",
+                        "I don't want to play now",
+                        "I am done",
+                        "good bye",
+                        "lets play some other time",
+                        "I don't want to play"
+                    ]
+                },
+                {
+                    "name": "WelcomeIntent",
+                    "slots": [],
+                    "samples": [
+                        "start quiz",
+                        "play quiz",
+                        "play funny riddle",
+                        "one more fun riddle",
+                        "one more funny riddle",
+                        "play ridiculous riddles",
+                        "let me try again",
+                        "let me try one more time",
+                        "lets start again",
+                        "lets start the riddle again",
+                        "lets play again",
+                        "I want to play again",
+                        "I want to try again",
+                        "give me one more chance",
+                        "share a funny riddle",
+                        "share funny riddle",
+                        "ask me a question",
+                        "ask me again"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RiddleAnswerIntent",
+                    "slots": [
+                        {
+                            "name": "riddle_answer",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{riddle_answer}",
+                                "it is {riddle_answer}",
+                                "the answer is {riddle_answer}",
+                                "i think it is {riddle_answer}",
+                                "my answer is {riddle_answer}",
+                                "answer is {riddle_answer}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "my answer is {riddle_answer}",
+                        "answer is {riddle_answer}",
+                        "it could be {riddle_answer}",
+                        "it's {riddle_answer}",
+                        "it is {riddle_answer}",
+                        "may be it is {riddle_answer}",
+                        "it may be {riddle_answer}",
+                        "i think it is {riddle_answer}",
+                        "the answer is {riddle_answer}",
+                        "{riddle_answer} is the answer"
+                    ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": [
+                        "I don't know"
+                    ]
+                }
+            ],
+            "types": []
         },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RiddleAnswerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "riddle_answer",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1530037572883.915178156742"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
         },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": [
-            "quit",
-            "I don't want to play now",
-            "I am done",
-            "good bye",
-            "lets play some other time",
-            "I don't want to play"
-          ]
-        },
-        {
-          "name": "WelcomeIntent",
-          "slots": [],
-          "samples": [
-            "play funny riddle",
-            "one more fun riddle",
-            "one more funny riddle",
-            "play ridiculous riddles",
-            "let me try again",
-            "let me try one more time",
-            "lets start again",
-            "lets start the riddle again",
-            "lets play again",
-            "I want to play again",
-            "I want to try again",
-            "give me one more chance",
-            "share a funny riddle",
-            "share funny riddle"
-          ]
-        },
-        {
-          "name": "AMAZON.NavigateHomeIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.MoreIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NavigateSettingsIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.NextIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PageUpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PageDownIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.PreviousIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollRightIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollDownIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollLeftIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.ScrollUpIntent",
-          "samples": []
-        },
-        {
-          "name": "RiddleAnswerIntent",
-          "slots": [{
-            "name": "riddle_answer",
-            "type": "AMAZON.SearchQuery",
-            "samples": [
-              "{riddle_answer}",
-              "it is {riddle_answer}",
-              "the answer is {riddle_answer}",
-              "i think it is {riddle_answer}",
-              "my answer is {riddle_answer}",
-              "answer is {riddle_answer}"
-            ]
-          }],
-          "samples": [
-            "my answer is {riddle_answer}",
-            "answer is {riddle_answer}",
-            "it could be {riddle_answer}",
-            "it's {riddle_answer}",
-            "it is {riddle_answer}",
-            "may be it is {riddle_answer}",
-            "it may be {riddle_answer}",
-            "i think it is {riddle_answer}",
-            "the answer is {riddle_answer}"
-          ]
-        },
-        {
-          "name": "AMAZON.FallbackIntent",
-          "samples": [
-            "I don't know"
-          ]
-        }
-      ],
-      "types": []
-    },
-    "dialog": {
-      "intents": [{
-        "name": "RiddleAnswerIntent",
-        "confirmationRequired": false,
-        "prompts": {},
-        "slots": [{
-          "name": "riddle_answer",
-          "type": "AMAZON.SearchQuery",
-          "confirmationRequired": false,
-          "elicitationRequired": true,
-          "prompts": {
-            "elicitation": "Elicit.Slot.1530037572883.915178156742"
-          }
-        }]
-      }],
-      "delegationStrategy": "ALWAYS"
-    },
-    "prompts": [{
-      "id": "Elicit.Slot.1530037572883.915178156742",
-      "variations": [{
-          "type": "PlainText",
-          "value": "tell me the answer of the riddle "
-        },
-        {
-          "type": "PlainText",
-          "value": "kindly share your answer"
-        }
-      ]
-    }]
-  }
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1530037572883.915178156742",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "tell me the answer of the riddle "
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "kindly share your answer"
+                    }
+                ]
+            }
+        ]
+    }
 }
